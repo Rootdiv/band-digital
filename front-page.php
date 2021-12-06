@@ -109,7 +109,6 @@
                 Мы создадим сайт про вашу компанию и вам не придется заказывать услуги у фрилансеров, переживая за сроки
                 проекта и его качество. В нашей команде есть все нужные специалисты, которые сделаю отличный сайт
               </p>
-
               <ul class="about-list">
                 <li><i class="icofont icofont-check-circled"></i> Адаптивный</li>
                 <li><i class="icofont icofont-check-circled"> </i> С анимацией</li>
@@ -249,7 +248,6 @@
             <div class="pricing-block">
               <div class="price-header">
                 <i class="icofont-diamond"></i>
-
                 <h4 class="price">15 000<small>₽</small></h4>
                 <h5>ежемесячно</h5>
               </div>
@@ -271,7 +269,6 @@
             <div class="pricing-block">
               <div class="price-header">
                 <i class="icofont-rocket-alt-1"></i>
-
                 <h4 class="price">25 000<small>₽</small></h4>
                 <h5>ежемесячно</h5>
               </div>
@@ -293,6 +290,7 @@
             <div class="pricing-block">
               <div class="price-header">
                 <i class="icofont-light-bulb"></i>
+
                 <h4 class="price">55 000<small>₽</small></h4>
                 <h5>ежемесячно</h5>
               </div>
@@ -391,6 +389,7 @@
                             <img src="images/author/3b.jpg" alt="" class="img-fluid" />
                           </div>
                         </div>
+
                         <p>
                           <i class="icofont icofont-quote-left"></i>Это отличная платформа для тех, кто хочет начать
                           бизнес, но не может принять правильное решение. Это действительно отличное место для того,
