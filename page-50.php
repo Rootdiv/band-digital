@@ -1,4 +1,5 @@
-<?php get_header();?>
+<?php //Страница о компании
+get_header();?>
     <!--MAIN BANNER AREA START -->
     <div class="page-banner-area page-contact" id="page-banner">
       <div class="overlay dark-overlay"></div>

@@ -1,4 +1,9 @@
-<?php get_header();?>
+<?php
+/*
+Template Name: Страница контактов
+Template Post Type: page
+*/
+get_header();?>
     <!--MAIN BANNER AREA START -->
     <div class="page-banner-area page-contact" id="page-banner">
       <div class="overlay dark-overlay"></div>
