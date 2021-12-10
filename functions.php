@@ -13,7 +13,7 @@ if (!function_exists('band_digital_setup')) {
     add_theme_support('title-tag');
     //Добавление миниатюр для постов и страниц
     add_theme_support('post-thumbnails');
-    set_post_thumbnail_size(730, 480);
+    set_post_thumbnail_size(730, 480, true);
   }
 }
 add_action('after_setup_theme', 'band_digital_setup');
@@ -102,8 +102,8 @@ class bootstrap_4_walker_nav_menu extends Walker_Nav_menu {
     $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
     $attributes .= ($args->walker->has_children) ?
-      ' class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' :
-      ' class="nav-link"';
+    ' class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' :
+    ' class="nav-link"';
 
     $item_output = $args->before;
     $item_output .= ($depth > 0) ? '<a class="dropdown-item"' . $attributes . '>' : '<a' . $attributes . '>';
@@ -131,13 +131,26 @@ class bootstrap_4_walker_nav_menu extends Walker_Nav_menu {
 // add_filter('nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10, 1);
 
 //Отключаем создание миниатюр файлов для указанных размеров
-add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
-function delete_intermediate_image_sizes( $sizes ){
+add_filter('intermediate_image_sizes', 'delete_intermediate_image_sizes');
+function delete_intermediate_image_sizes($sizes) {
   //размеры которые нужно удалить
-  return array_diff( $sizes, [
+  return array_diff($sizes, [
     'medium_large',
     'large',
     '1536x1536',
     '2048x2048',
-  ] );
+  ]);
 }
+
+//Удаляем H2 из шаблона пагинации
+add_filter('navigation_markup_template', 'my_navigation_template', 10, 2);
+function my_navigation_template($template, $class) {
+  return '
+    <nav class="navigation %1$s" role="navigation">
+      <div class="nav-links">%3$s</div>
+    </nav>
+	';
+}
+the_posts_pagination(array(
+  'end_size' => 2,
+));

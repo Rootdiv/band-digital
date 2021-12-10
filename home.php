@@ -62,7 +62,7 @@
                       else {
                         echo '<img src="'.get_template_directory_uri().'/images/img-default.png" alt="" class="img-fluid" />';
                       }?>
-                      <div class="mt-4 mb-3 d-flex">
+                      <div class="mt-4 mb-3 d-flex flex-wrap">
                         <div class="post-author mr-3">
                           <i class="fa fa-user"></i>
                           <span class="h6 text-uppercase"><?php the_author();?></span>
@@ -82,6 +82,12 @@
                 endwhile; else : ?>
                 <p>Записей нет.</p>
               <?php endif; ?>
+              <div class="col-lg-12 d-flex justify-content-center"><?php the_posts_pagination(array(
+                  'prev_text'    => '<span class="p-2 border">' . __('« Предыдущие посты') . '</span>',
+                  'next_text'    => '<span class="p-2 border">' . __('Следующие посты »') . '</span>',
+                  'before_page_number' => '<span class="p-2 border">',
+                  'after_page_number'  => '</span>'
+              ));?></div>
             </div>
           </div>
           <div class="col-lg-4">
