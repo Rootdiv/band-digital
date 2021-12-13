@@ -3,11 +3,12 @@
     <div class="page-banner-area page-contact" id="page-banner">
       <div class="overlay dark-overlay"></div>
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+        <div class="row">
+          <div class="col-lg-8 col-sm-12 col-md-12">
             <div class="banner-content content-padding">
-              <h1 class="text-white">Band Digital журнал</h1>
-              <p>Полезные статьи про маркетинг и диджитал</p>
+              <h1 class="text-white"><?php
+              printf(esc_html__('Результаты поиска по&nbsp;фразе: %s', 'band-digital'), '<span>' . get_search_query() . '</span>');
+              ?></h1>
             </div>
           </div>
         </div>
@@ -94,40 +95,6 @@
             <div class="row">
               <div class="col-lg-12">
                 <?php if (!dynamic_sidebar('sidebar-blog')) : dynamic_sidebar('sidebar-blog'); endif; ?>
-              </div>
-              <div class="col-lg-12">
-                <div class="sidebar-widget category">
-                  <h5 class="mb-3">Рубрики</h5>
-                  <ul class="list-styled">
-                    <li>Маркетинг</li>
-                    <li>Диджитал</li>
-                    <li>SEO</li>
-                    <li>Веб-дизайн</li>
-                    <li>Разработка</li>
-                    <li>Видео</li>
-                    <li>Подкаст</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="sidebar-widget tag">
-                  <a href="#">web</a>
-                  <a href="#">development</a>
-                  <a href="#">seo</a>
-                  <a href="#">marketing</a>
-                  <a href="#">branding</a>
-                  <a href="#">web deisgn</a>
-                  <a href="#">Tutorial</a>
-                  <a href="#">Tips</a>
-                  <a href="#">Design trend</a>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="sidebar-widget download">
-                  <h5 class="mb-4">Полезные файлы</h5>
-                  <a href="#"> <i class="fa fa-file-pdf"></i>Презентация Promodise</a>
-                  <a href="#"> <i class="fa fa-file-pdf"></i>10 источников бесплатного SEO</a>
-                </div>
               </div>
             </div>
           </div>

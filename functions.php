@@ -143,14 +143,23 @@ function delete_intermediate_image_sizes($sizes) {
 }
 
 //Удаляем H2 из шаблона пагинации
-add_filter('navigation_markup_template', 'my_navigation_template', 10, 2);
 function my_navigation_template($template, $class) {
   return '
-    <nav class="navigation %1$s" role="navigation">
-      <div class="nav-links">%3$s</div>
-    </nav>
+  <nav class="navigation %1$s" role="navigation">
+  <div class="nav-links">%3$s</div>
+  </nav>
 	';
 }
-the_posts_pagination(array(
-  'end_size' => 2,
-));
+add_filter('navigation_markup_template', 'my_navigation_template', 10, 2);
+
+function band_digital_widgets_init() {
+  register_sidebar(array(
+    'name'          => esc_html__('Сайдбар блога', 'band_digital'),
+    'id'            => 'sidebar-blog',
+    'before_widget' => '<section id="%1$s" class="sidebar-widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h5 class="widget-title mb-3">',
+    'after_title'   => '</h5>'
+  ));
+}
+add_action('widgets_init', 'band_digital_widgets_init');
