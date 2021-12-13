@@ -1282,15 +1282,18 @@ BLOG PAGE
 }
 
 .search i {
+  color: #635CDB;
+}
+
+.form-search {
   position: absolute;
   right: 0px;
   top: 0px;
   margin-right: 35px;
-  margin-top: 15px;
+  margin-top: 12px;
   color: #635CDB;
-}
-
-.search button {
+  background: transparent;
+  border: none;
   cursor: pointer;
 }
 

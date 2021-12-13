@@ -90,18 +90,24 @@ BLOG PAGE
 }
 
 .search i {
+	// position: absolute;
+	// right: 0px;
+	// top: 0px;
+	// margin-right: 35px;
+	// margin-top: 15px;
+	color: $primary-color;
+}
+
+.form-search {
 	position: absolute;
 	right: 0px;
 	top: 0px;
 	margin-right: 35px;
-	margin-top: 15px;
+	margin-top: 12px;
 	color: $primary-color;
-}
-
-.search {
-	button {
-		cursor: pointer;
-	}
+	background: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 .download a {
