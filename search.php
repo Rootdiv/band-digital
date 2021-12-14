@@ -84,10 +84,10 @@
                 <p>Записей нет.</p>
               <?php endif; ?>
               <div class="col-lg-12 mb-5 mb-lg-0 d-flex justify-content-center"><?php the_posts_pagination(array(
-                  'prev_text'    => '<span class="p-2 border">' . __('« Предыдущие посты') . '</span>',
-                  'next_text'    => '<span class="p-2 border">' . __('Следующие посты »') . '</span>',
-                  'before_page_number' => '<span class="p-2 border">',
-                  'after_page_number'  => '</span>'
+                'prev_text'    => '<div class="p-2 border m-1">' . __('« Предыдущие посты') . '</div>',
+                'next_text'    => '<div class="p-2 border m-1">' . __('Следующие посты »') . '</div>',
+                'before_page_number' => '<div class="p-2 border m-1">',
+                'after_page_number'  => '</div>'
               ));?></div>
             </div>
           </div>
