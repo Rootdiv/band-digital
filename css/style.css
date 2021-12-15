@@ -1396,16 +1396,16 @@ BLOG SINGLE
   margin-bottom: 10px;
 }
 
-.footer-text p span {
+.footer-text p strong {
   color: #000;
 }
 
-.footer-text p.mail {
+.footer-text .mail a {
   color: #635CDB;
 }
 
 .bg-main {
-  background: #F4F8FB;
+  background: #f4f8fb;
 }
 
 .footer-widget a {
