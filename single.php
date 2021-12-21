@@ -38,7 +38,11 @@
               </div>
             </div>
           </main>
-          <?php get_sidebar();?>
+          <div class="col-lg-4">
+            <div class="row">
+              <?php get_sidebar();?>
+            </div>
+          </div>
         </div>
       </div>
     </section>

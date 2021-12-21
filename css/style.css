@@ -1281,11 +1281,15 @@ BLOG PAGE
   display: inline-block;
 }
 
-.form-search {
+.search-form {
+  position: relative;
+}
+
+.search-button {
   position: absolute;
   right: 0px;
   top: 0px;
-  margin-right: 35px;
+  margin-right: 20px;
   margin-top: 12px;
   color: #635CDB;
   background: transparent;

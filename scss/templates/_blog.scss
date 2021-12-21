@@ -89,20 +89,15 @@ BLOG PAGE
 	display: inline-block;
 }
 
-// .search i {
-// 	position: absolute;
-// 	right: 0px;
-// 	top: 0px;
-// 	margin-right: 35px;
-// 	margin-top: 15px;
-// 	color: $primary-color;
-// }
+.search-form {
+	position: relative;
+}
 
-.form-search {
+.search-button {
 	position: absolute;
 	right: 0px;
 	top: 0px;
-	margin-right: 35px;
+	margin-right: 20px;
 	margin-top: 12px;
 	color: $primary-color;
 	background: transparent;
