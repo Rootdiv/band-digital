@@ -886,6 +886,10 @@ HISTORY MISSION
   color: #635CDB;
 }
 
+.section .wp-block-image img {
+  height: auto;
+}
+
 /* ================================
 SERVICE PAGE
 ==============================*/
