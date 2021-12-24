@@ -855,3 +855,36 @@ function partners_custom_init() {
 		'supports'           => array('title','thumbnail')
 	));
 }
+
+//Регистрируем тип записи - Тарифы
+add_action('init', 'price_custom_init');
+function price_custom_init() {
+	register_post_type('price', array(
+		'labels'             => array(
+			'name'               => __('Тарифы'), // Основное название типа записи
+      'singular_name'      => __('Партнёр'), // отдельное название записи типа price
+			'add_new'            => __('Добавить новый'),
+			'add_new_item'       => __('Добавить новый тариф'),
+			'edit_item'          => __('Редактировать тариф'),
+			'new_item'           => __('Новая услуга'),
+			'view_item'          => __('Посмотреть тариф'),
+			'search_items'       => __('Найти тариф'),
+			'not_found'          => __('Тарифов не найдено'),
+			'not_found_in_trash' => __('В корзине тарифов не найдено'),
+			'parent_item_colon'  => '',
+			'menu_name'          => __('Тарифы'),
+    ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+    'menu_icon'          => 'dashicons-money-alt',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 7,
+		'supports'           => array('title','editor','author','thumbnail','excerpt', 'custom-fields')
+	));
+}
