@@ -16,7 +16,7 @@
           global $post;
 
           $query = new WP_Query([
-            'posts_per_page' => 8,
+            'posts_per_page' => isset($args['count']) ? $args['count'] : 5,
             'post_type' => 'partners',
           ]);
 

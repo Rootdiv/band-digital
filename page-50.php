@@ -257,33 +257,6 @@ get_header();?>
         </div>
       </div>
     </section>
-    <!--  SECTION TEAM END  -->
-    <!--  PARTNER START  -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 text-center text-lg-left">
-            <div class="mb-5">
-              <h3 class="mb-2">Эти компании доверяют нам</h3>
-              <p>Компании, с которыми мы работаем давно</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client01.png" alt="partner" class="img-fluid" />
-          </div>
-          <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client06.png" alt="partner" class="img-fluid" />
-          </div>
-          <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client04.png" alt="partner" class="img-fluid" />
-          </div>
-          <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client05.png" alt="partner" class="img-fluid" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  PARTNER END  -->
+    <!-- SECTION TEAM END -->
+    <?=get_template_part('template-parts/content', 'partners', ['title' => true]);?>
 <?php get_footer();?>

@@ -856,13 +856,13 @@ function partners_custom_init() {
 	));
 }
 
-//Регистрируем тип записи - Тарифы
-add_action('init', 'price_custom_init');
-function price_custom_init() {
+add_action('init', 'record_custom_init');
+function record_custom_init() {
+  //Регистрируем тип записи - Тарифы
 	register_post_type('price', array(
 		'labels'             => array(
 			'name'               => __('Тарифы'), // Основное название типа записи
-      'singular_name'      => __('Партнёр'), // отдельное название записи типа price
+      'singular_name'      => __('Тариф'), // отдельное название записи типа price
 			'add_new'            => __('Добавить новый'),
 			'add_new_item'       => __('Добавить новый тариф'),
 			'edit_item'          => __('Редактировать тариф'),
@@ -886,5 +886,34 @@ function price_custom_init() {
 		'hierarchical'       => false,
 		'menu_position'      => 7,
 		'supports'           => array('title','editor','author','thumbnail','excerpt', 'custom-fields')
+	));
+  //Регистрируем тип записи - Отзывы
+  register_post_type('testimonial', array(
+		'labels'             => array(
+			'name'               => __('Отзывы'), // Основное название типа записи
+      'singular_name'      => __('Отзыв'), // отдельное название записи типа price
+			'add_new'            => __('Добавить новый'),
+			'add_new_item'       => __('Добавить новый отзыв'),
+			'edit_item'          => __('Редактировать отзыв'),
+			'new_item'           => __('Новая услуга'),
+			'view_item'          => __('Посмотреть отзыв'),
+			'search_items'       => __('Найти отзыв'),
+			'not_found'          => __('Отзывов не найдено'),
+			'not_found_in_trash' => __('В корзине отзывов не найдено'),
+			'parent_item_colon'  => '',
+			'menu_name'          => __('Отзывы'),
+    ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+    'menu_icon'          => 'dashicons-format-status',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 7,
+		'supports'           => array('title','thumbnail','excerpt', 'custom-fields')
 	));
 }

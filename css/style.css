@@ -611,9 +611,9 @@ INner Pages
 }
 
 /*-------------------- ------------
- INTRO SECTION
+INTRO SECTION
 -----------------------------*/
-#intro {
+.intro {
   padding-bottom: 0px;
 }
 
@@ -621,10 +621,15 @@ INner Pages
   margin-top: 45px;
 }
 
-#intro .section-heading p {
+.intro .section-heading {
   color: #000;
   font-size: 30px;
   line-height: 40px;
+}
+
+.intro .row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 
 .intro-box {
@@ -671,9 +676,9 @@ INner Pages
   padding-bottom: 90px;
 }
 
-#about {
+.about {
   position: relative;
-  padding-bottom: 85px;
+  padding-bottom: 55px;
 }
 
 .about-bg-img {
@@ -690,7 +695,7 @@ INner Pages
 }
 
 .about-content {
-  margin-top: 94px;
+  margin-top: 55px;
 }
 
 .about-content .subtitle {
@@ -1462,7 +1467,7 @@ BLOG SINGLE
 }
 
 /*-------------------------------
- RESPONSIVE LAYOUT
+RESPONSIVE LAYOUT
 ---------------------------------*/
 /*Extra large devices (large desktops, 1200px and up)*/
 /*Large devices (desktops, 992px and up)*/
@@ -1470,8 +1475,8 @@ BLOG SINGLE
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
   /*---------------
-   NAVIGATION
-  ----------------*/
+    NAVIGATION
+    ----------------*/
   .navbar-toggler {
     background: #fff;
     border-radius: 0px;
@@ -1491,22 +1496,22 @@ BLOG SINGLE
   }
 
   /*----------------------
-   SECTION HEAINDG
-  -----------------------*/
+    SECTION HEAINDG
+    -----------------------*/
   .section-heading {
     width: 100%;
   }
 
   /*----------------
-   INTRO
-  ----------------*/
-  #intro {
+    INTRO
+    ----------------*/
+  .intro {
     padding-bottom: 90px;
   }
 
   /*----------------
-   ABOUT
-  ----------------*/
+    ABOUT
+    ----------------*/
   .about-list li {
     float: none;
     width: 100%;
@@ -1523,21 +1528,21 @@ BLOG SINGLE
     margin-top: 60px;
   }
 
-  #about {
+  .about {
     padding-bottom: 40px;
   }
 
   /*--------------
-   COUNTER
-  ----------------*/
+    COUNTER
+    ----------------*/
   .counter-stat {
     margin-bottom: 30px;
     text-align: center;
   }
 
   /*--------------
-   BLOG
-  ----------------*/
+    BLOG
+    ----------------*/
   .blog-text {
     padding: 0px;
     margin-top: 10px;
@@ -1556,8 +1561,8 @@ BLOG SINGLE
   }
 
   /*--------------
-   FOOTER
-  ----------------*/
+    FOOTER
+    ----------------*/
   .footer-widget {
     margin-bottom: 30px;
   }
@@ -1565,8 +1570,8 @@ BLOG SINGLE
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
   /*---------------
-   NAVIGATION
-  ----------------*/
+    NAVIGATION
+    ----------------*/
   .navbar-toggler {
     background: #fff;
     border-radius: 0px;
@@ -1586,48 +1591,48 @@ BLOG SINGLE
   }
 
   /*----------------------
-   SECTION HEAINDG
-  -----------------------*/
+    SECTION HEAINDG
+    -----------------------*/
   .section-heading {
     width: 100%;
   }
 
   /*----------------
-   INTRO
-  ----------------*/
-  #intro {
+    INTRO
+    ----------------*/
+  .intro {
     padding-bottom: 90px;
   }
 
   /*----------------
-   ABOUT
-  ----------------*/
+    ABOUT
+    ----------------*/
   .about-content {
     margin-top: 60px;
   }
 
-  #about {
+  .about {
     padding-bottom: 40px;
   }
 
   /*-------------------
-   TESTIMONIAL
-  -------------------*/
+    TESTIMONIAL
+    -------------------*/
   .testimonial-content {
     padding: 10px;
   }
 
   /*--------------
-   COUNTER
-  ----------------*/
+    COUNTER
+    ----------------*/
   .counter-stat {
     margin-bottom: 30px;
     text-align: center;
   }
 
   /*--------------
-   BLOG
-  ----------------*/
+    BLOG
+    ----------------*/
   .blog-block {
     margin-bottom: 30px;
   }
@@ -1656,15 +1661,15 @@ BLOG SINGLE
   }
 
   /*--------------
-   CLIENT
-  --------------*/
+    CLIENT
+    --------------*/
   .client-img {
     text-align: center;
   }
 
   /*--------------
-   FOOTER
-  ----------------*/
+    FOOTER
+    ----------------*/
   .footer-widget {
     margin-bottom: 30px;
   }
@@ -1680,8 +1685,8 @@ BLOG SINGLE
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   /*---------------
-   NAVIGATION
-  ----------------*/
+    NAVIGATION
+    ----------------*/
   .navbar-toggler {
     background: #fff;
     border-radius: 0px;
@@ -1702,13 +1707,14 @@ BLOG SINGLE
   }
 
   /*----------------------
-   SECTION HEAINDG
-  -----------------------*/
-  #intro .section-heading, .section-heading {
+    SECTION HEAINDG
+    -----------------------*/
+  .intro .section-heading,
+.section-heading {
     width: 100%;
   }
 
-  #intro .section-heading p {
+  .intro .section-heading {
     font-size: 16px;
     line-height: 28px;
   }
@@ -1724,8 +1730,8 @@ BLOG SINGLE
   }
 
   /*--------------------
-   BANNER
-  -----------------*/
+    BANNER
+    -----------------*/
   .banner-content .banner-title {
     line-height: 37px;
   }
@@ -1735,15 +1741,15 @@ BLOG SINGLE
   }
 
   /*----------------
-   INTRO
-  ----------------*/
-  #intro {
+    INTRO
+    ----------------*/
+  .intro {
     padding-bottom: 90px;
   }
 
   /*----------------
-   ABOUT
-  ----------------*/
+    ABOUT
+    ----------------*/
   .about-list li {
     float: none;
     width: 100%;
@@ -1760,7 +1766,7 @@ BLOG SINGLE
     margin-top: 60px;
   }
 
-  #about {
+  .about {
     padding-bottom: 40px;
   }
 
@@ -1773,23 +1779,23 @@ BLOG SINGLE
   }
 
   /*-------------------
-   TESTIMONIAL
-  -------------------*/
+    TESTIMONIAL
+    -------------------*/
   .testimonial-content {
     padding: 10px;
   }
 
   /*--------------
-   COUNTER
-  ----------------*/
+    COUNTER
+    ----------------*/
   .counter-stat {
     margin-bottom: 30px;
     text-align: center;
   }
 
   /*--------------
-   BLOG
-  ----------------*/
+    BLOG
+    ----------------*/
   .blog-block {
     margin-bottom: 30px;
   }
@@ -1809,15 +1815,15 @@ BLOG SINGLE
   }
 
   /*--------------
-   CLIENT
-  --------------*/
+    CLIENT
+    --------------*/
   .client-img {
     text-align: center;
   }
 
   /*--------------
-   FOOTER
-  ----------------*/
+    FOOTER
+    ----------------*/
   .footer-widget {
     margin-bottom: 30px;
   }

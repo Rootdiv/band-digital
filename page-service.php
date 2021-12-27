@@ -19,5 +19,5 @@
     echo get_template_part('template-parts/content', 'service', ['class'=> 'service-style-two',
       'custom_title' => 'Диджитал полного цикла']);
     //Вывод партнёров
-    echo get_template_part('template-parts/content', 'partners', ['title' => true]);?>
+    echo get_template_part('template-parts/content', 'partners', ['title' => true, 'count' => 8]);?>
 <?php get_footer();?>

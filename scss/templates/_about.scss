@@ -1,127 +1,120 @@
-
-
 /*--------------------------
   ABOUT SECTION
 ----------------------*/
 
 .section-pt {
-    padding-top: 90px;
+  padding-top: 90px;
 }
 
 .section-pb {
-    padding-bottom: 90px;
+  padding-bottom: 90px;
 }
 
-#about {
-    position: relative;
-    padding-bottom: 85px;
+.about {
+  position: relative;
+  padding-bottom: 55px;
 }
 
 .about-bg-img {
-    position: absolute;
-    right: 0px;
-    content: "";
-    background: url("../images/banner/1.jpg") 50% 50%;
-    width: 40%;
-    height: 100%;
-    max-height: 560px;
-    top: 0px;
-    -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+  position: absolute;
+  right: 0px;
+  content: '';
+  background: url('../images/banner/1.jpg') 50% 50%;
+  width: 40%;
+  height: 100%;
+  max-height: 560px;
+  top: 0px;
+  -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
 }
 
-
 .about-content {
-    margin-top:94px;
+  margin-top: 55px;
 }
 
 .about-content .subtitle {
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .about-content h3 {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .about-list {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .about-list li {
-    width: 45%;
-    float: left;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    color: #888;
+  width: 45%;
+  float: left;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  color: #888;
 }
 
 .about-list li i {
-    color: $black;
-    margin-right: 10px;
+  color: $black;
+  margin-right: 10px;
 }
-
 
 /* ----------------------
 ABOUT PAGE
 -------------------------*/
 
-
-.about-list2 li i{
-    margin-right: 10px;
-    color: $primary-color;
+.about-list2 li i {
+  margin-right: 10px;
+  color: $primary-color;
 }
 
-.icon-3x{
-    font-size: 3rem;
-}
-.text-default{
-    color: $primary-color;
+.icon-3x {
+  font-size: 3rem;
 }
 
-
-
-.team-social li a{
-    font-size: 13px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border: 1px solid $light;
-    display: inline-block;
-    padding-top: 3px;
-    background: $light;
+.text-default {
+  color: $primary-color;
 }
 
+.team-social li a {
+  font-size: 13px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid $light;
+  display: inline-block;
+  padding-top: 3px;
+  background: $light;
+}
 
 /* ========================
 HISTORY MISSION
 ==============================*/
 
-.img-block img{
-    width: 200px;
+.img-block img {
+  width: 200px;
 }
-
 
 /* ========================
 
 ==============================*/
-#section-strategy{
-    background: url("../images/bg/bg-1.jpg") 50% 50% no-repeat;
-    background-size: cover;
-}
-.strategy-text{
-    margin-bottom: 50px;
+#section-strategy {
+  background: url('../images/bg/bg-1.jpg') 50% 50% no-repeat;
+  background-size: cover;
 }
 
-.strategy-text h4{
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: 600;
+.strategy-text {
+  margin-bottom: 50px;
 }
 
-.strategy-text span{
-    font-size: 61px;
-    color: $primary-color;
-    margin-bottom: 15px;
-    display: block;
+.strategy-text h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.strategy-text span {
+  font-size: 61px;
+  color: $primary-color;
+  margin-bottom: 15px;
+  display: block;
 }
