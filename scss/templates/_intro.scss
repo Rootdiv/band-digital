@@ -10,11 +10,19 @@ INTRO SECTION
   margin-top: 45px;
 }
 
-.intro .section-heading {
-  color: $black;
-  font-size: 30px;
-  line-height: 40px;
+.section-heading {
+  h2 {
+    color: $black;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .lead {
+    font-weight: 300 !important;
+  }
 }
+
+
 
 .intro .row {
   margin-right: 0 !important;

@@ -621,10 +621,13 @@ INTRO SECTION
   margin-top: 45px;
 }
 
-.intro .section-heading {
+.section-heading h2 {
   color: #000;
   font-size: 30px;
   line-height: 40px;
+}
+.section-heading .lead {
+  font-weight: 300 !important;
 }
 
 .intro .row {
@@ -679,6 +682,11 @@ INTRO SECTION
 .about {
   position: relative;
   padding-bottom: 55px;
+}
+
+.row.about {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 
 .about-bg-img {
