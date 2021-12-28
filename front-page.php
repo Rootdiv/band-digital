@@ -93,28 +93,28 @@
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-heart"></i>
-              <span class="counter"><?php the_field('clients', $post->ID);?></span>
+              <span class="counter"><?=get_post_meta($post->ID, 'numbers_clients', true);?></span>
               <h5>счастливых клиентов</h5>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-rocket"></i>
-              <span class="counter"><?php the_field('done-projects', $post->ID);?></span>
+              <span class="counter"><?php the_field('numbers_done-projects', $post->ID);?></span>
               <h5>выполненных проектов</h5>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-hand-power"></i>
-              <span class="counter"><?php the_field('team', $post->ID);?></span>
+              <span class="counter"><?php the_field('numbers_team', $post->ID);?></span>
               <h5>людей в команде</h5>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-md-6">
             <div class="counter-stat">
               <i class="icofont icofont-shield-alt"></i>
-              <span class="counter"><?php the_field('current-projects', $post->ID);?></span>
+              <span class="counter"><?php the_field('numbers_current-projects', $post->ID);?></span>
               <h5>Проектов в работе</h5>
             </div>
           </div>
