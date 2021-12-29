@@ -35,8 +35,9 @@ get_header();?>
         </div>
         <div class="row">
           <div class="col-lg-7 col-sm-12">
-            <form class="contact__form" method="post" action="mail.php">
+            <form class="contact__form" method="post" action="<?=admin_url('admin-ajax.php');?>">
               <!-- form message -->
+              <input type="hidden" name="action" value="my_action">
               <div class="row">
                 <div class="col-12">
                   <div class="alert alert-success contact__msg" style="display: none" role="alert">

@@ -17,13 +17,13 @@
 
     // fail function
     function fail_func(data) {
-        message.fadeIn().removeClass('alert-success').addClass('alert-success');
+        message.fadeIn().removeClass('alert-success').addClass('alert-danger');
         message.text(data.responseText);
         setTimeout(function () {
             message.fadeOut();
         }, 2000);
     }
-    
+
     form.submit(function (e) {
         e.preventDefault();
         form_data = $(this).serialize();
@@ -35,5 +35,5 @@
         .done(done_func)
         .fail(fail_func);
     });
-    
+
 })(jQuery);

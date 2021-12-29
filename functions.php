@@ -917,3 +917,64 @@ function record_custom_init() {
 		'supports'           => array('title','thumbnail','excerpt', 'custom-fields')
 	));
 }
+
+add_action( 'phpmailer_init', 'my_phpmailer_example' );
+function my_phpmailer_example( $phpmailer ) {
+
+	$phpmailer->isSMTP();
+	$phpmailer->Host = 'smtp.mail.ru';
+	$phpmailer->SMTPAuth = true;
+	$phpmailer->Port = 465;
+	require_once 'mail_config.php';
+	$phpmailer->FromName = 'Wordpress Band Digital';
+}
+add_action('wp_ajax_my_action', 'my_action_callback');
+add_action('wp_ajax_nopriv_my_action', 'my_action_callback');
+function my_action_callback() {
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    #Подставляем email администратора
+    $mail_to = get_option('admin_email');
+
+    #Собираем данные из формы
+    $phone = trim($_POST['phone']);
+    $name = str_replace(array("\r", "\n"), array(" ", " "), strip_tags(trim($_POST["name"])));
+    $email = trim($_POST['email']);
+    $message = trim($_POST['message']);
+
+    if (empty($name) or empty($email) or empty($phone) or empty($message)) {
+      #Отправляем ошибку 400 (bad request).
+      http_response_code(400);
+      echo 'Пожалуйста заполните все обязательные поля.';
+      exit;
+    }
+
+    #Содержимое письма
+    $subject = 'Заявка с сайта ' . get_bloginfo('name');
+    $content = "Имя: $name\n";
+    $content .= "Email: $email\n\n";
+    $content .= "Сообщение:\n$message\n";
+
+    #Заголовок письма.
+    $headers = "From: $name <$email>";
+
+    #Попытка отправить письмо с помощью mail().
+    $success = wp_mail($mail_to, $subject, $content, $headers);
+    if ($success) {
+      # Set a 200 (okay) response code.
+      http_response_code(200);
+      echo 'Спасибо! Ваше сообщение отправлено';
+    } else {
+      # Set a 500 (internal server error) response code.
+      http_response_code(500);
+      echo 'Упс! Что-то пошло не так, не получилось отправить сообщение.';
+    }
+
+  } else {
+    # Not a POST request, set a 403 (forbidden) response code.
+    http_response_code(403);
+    echo 'Не получилось отправить, попробуйте позже.';
+  }
+	// выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	wp_die();
+}
