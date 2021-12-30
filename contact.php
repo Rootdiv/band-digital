@@ -35,18 +35,19 @@ get_header();?>
         </div>
         <div class="row">
           <div class="col-lg-7 col-sm-12">
-            <form class="contact__form" method="post" action="<?=admin_url('admin-ajax.php');?>">
+            <?=do_shortcode('[contact-form-7 id="630" title="Виджет формы"]');?>
+            <!-- <form class="contact__form" method="post" action="<?=admin_url('admin-ajax.php');?>"> -->
               <!-- form message -->
-              <input type="hidden" name="action" value="my_action">
+              <!-- <input type="hidden" name="action" value="my_action">
               <div class="row">
                 <div class="col-12">
                   <div class="alert alert-success contact__msg" style="display: none" role="alert">
                     Ваше сообщение отправлено.
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- end message -->
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-6 form-group">
                   <input name="name" type="text" class="form-control" placeholder="Имя" required />
                 </div>
@@ -62,7 +63,7 @@ get_header();?>
                 <div class="col-12 mt-4">
                   <input name="submit" type="submit" class="btn btn-hero btn-circled" value="Отправить" />
                 </div>
-              </div>
+              </div> -->
             </form>
           </div>
           <div class="col-lg-5 pl-4 mt-4 mt-lg-0">
