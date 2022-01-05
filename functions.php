@@ -922,7 +922,7 @@ add_action( 'phpmailer_init', 'my_phpmailer_example' );
 function my_phpmailer_example( $phpmailer ) {
 
 	$phpmailer->isSMTP();
-	$phpmailer->Host = 'smtp.mail.ru';
+	$phpmailer->Host = 'smtp.yandex.ru';
 	$phpmailer->SMTPAuth = true;
 	$phpmailer->Port = 465;
 	require_once 'mail_config.php';
@@ -977,4 +977,28 @@ function my_action_callback() {
   }
 	// выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 	wp_die();
+}
+
+add_shortcode( 'admin_email', 'admin_email_shortcode' );
+function admin_email_shortcode(){
+	return '<a href="mailto:' . get_option('admin_email') . '">' . get_option('admin_email') . '</a>';
+}
+
+add_shortcode( 'youtube', 'youtube_shortcode' );
+function youtube_shortcode($attrs){
+  $attrs = shortcode_atts([
+    //Видео по умолчанию, если не передан атрибут link
+		'link' => 'https://www.youtube.com/watch?v=w39_DAZHFVA'
+	], $attrs);
+  $video_link = '';
+  if(stristr($attrs['link'], 'youtube')){
+    $link = explode('?v=', $attrs['link']);
+    $video_link = end($link);
+  }elseif(stristr($attrs['link'], 'youtu')){
+    $link = explode('/', $attrs['link']);
+    $video_link = end($link);
+  }
+	return '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$video_link.'" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>';
 }
