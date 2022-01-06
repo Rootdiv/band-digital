@@ -26,7 +26,10 @@ get_header();?>
           <div class="col-lg-6 col-sm-12 col-md-12">
             <div class="mb-5">
               <h2 class="mb-2">Напишите нам</h2>
-              <?php the_content();?>
+              <p>
+                Обычно, мы видим заявку сразу, а перезваниваем или пишем в ответ в течение часа.
+                Иногда ответ может занять до одного дня.
+              </p>
             </div>
           </div>
         </div>
@@ -48,12 +51,6 @@ get_header();?>
     </section>
     <!--  CONTACT END  -->
     <!--  Google Map START  -->
-    <section id="map" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-sm-6 col-md-3"></div>
-        </div>
-      </div>
-    </section>
+    <?php the_content();?>
     <!--  Google Map END  -->
 <?php get_footer();?>

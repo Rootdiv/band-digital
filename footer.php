@@ -39,11 +39,6 @@
       </div>
     </section>
     <!--  FOOTER AREA END  -->
-
-    <!-- Essential Scripts =====================================-->
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap">
-    </script>
     <?php wp_footer();?>
   </body>
 </html>
