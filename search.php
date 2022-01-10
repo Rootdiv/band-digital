@@ -7,7 +7,7 @@
           <div class="col-lg-8 col-sm-12 col-md-12">
             <div class="banner-content content-padding">
               <h1 class="text-white"><?php
-              printf(esc_html__('Результаты поиска по&nbsp;фразе: %s', 'band-digital'), '<span>' . get_search_query() . '</span>');
+              printf(__('Search results for&nbsp;phrase: %s', 'band-digital'), '<span>' . get_search_query() . '</span>');
               ?></h1>
             </div>
           </div>
@@ -84,8 +84,8 @@
                 <p>Записей нет.</p>
               <?php endif; ?>
               <div class="col-lg-12 mb-5 mb-lg-0 d-flex justify-content-center"><?php the_posts_pagination(array(
-                'prev_text'    => '<div class="p-2 border m-1">' . __('« Предыдущие посты') . '</div>',
-                'next_text'    => '<div class="p-2 border m-1">' . __('Следующие посты »') . '</div>',
+                'prev_text'    => '<div class="p-2 border m-1">' . __('« Previous posts', 'band_digital') . '</div>',
+                'next_text'    => '<div class="p-2 border m-1">' . __('Next posts »', 'band_digital') . '</div>',
                 'before_page_number' => '<div class="p-2 border m-1">',
                 'after_page_number'  => '</div>'
               ));?></div>

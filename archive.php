@@ -8,16 +8,16 @@
             <div class="banner-content content-padding">
               <h1 class="text-white"><?php
                 if (is_category()) {
-                  echo __('<small>Рубрика</small> <br />') . get_queried_object()->name;
+                  echo '<small>' . __('Category', 'band_digital') . '</small> <br />' . get_queried_object()->name;
                 }
                 if (is_tag()) {
-                  echo __('<small>Записи с меткой</small> <br />') . get_queried_object()->name;
+                  echo '<small>' . __('Tags', 'band_digital') . '</small> <br />' . get_queried_object()->name;
                 }
                 if (is_author()) {
-                  echo __('<small>Записи автора</small> <br />') . get_the_author_meta('display_name');
+                  echo '<small>' . __('Author posts', 'band_digital') . get_the_author_meta('display_name');
                 }
                 if (is_date()) {
-                  echo __('<small>Архив по дате</small> <br />') . get_the_date('j F Y');
+                  echo '<small>' . __('Archive by date', 'band_digital') . get_the_date('j F Y');
                 }
               ?></h1>
               <p>Полезные статьи про маркетинг и диджитал</p>
@@ -100,8 +100,8 @@
                 <p>Записей нет.</p>
               <?php endif; ?>
               <div class="col-lg-12 mb-5 mb-lg-0 d-flex justify-content-center"><?php the_posts_pagination(array(
-                'prev_text'    => '<div class="p-2 border m-1">' . __('« Предыдущие посты') . '</div>',
-                'next_text'    => '<div class="p-2 border m-1">' . __('Следующие посты »') . '</div>',
+                'prev_text'    => '<div class="p-2 border m-1">' . __('« Previous posts', 'band_digital') . '</div>',
+                'next_text'    => '<div class="p-2 border m-1">' . __('Next posts »', 'band_digital') . '</div>',
                 'before_page_number' => '<div class="p-2 border m-1">',
                 'after_page_number'  => '</div>'
               ));?></div>

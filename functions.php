@@ -1,6 +1,7 @@
 <?php
 if (!function_exists('band_digital_setup')) {
   function band_digital_setup() {
+    load_theme_textdomain( 'band_digital', get_template_directory() . '/languages' );
     add_theme_support('custom-logo', [
       'height' => 50,
       'width' => 130,
@@ -163,7 +164,7 @@ add_filter('navigation_markup_template', 'my_navigation_template', 10, 2);
 
 function band_digital_widgets_init() {
   register_sidebar(array(
-    'name'          => esc_html__('Сайдбар блога', 'band_digital'),
+    'name'          => __('Blog sidebar', 'band_digital'),
     'id'            => 'sidebar-blog',
     'before_widget' => '<section id="%1$s" class="sidebar-widget %2$s">',
     'after_widget'  => '</section>',
@@ -171,7 +172,7 @@ function band_digital_widgets_init() {
     'after_title'   => '</h5>'
   ));
   register_sidebar(array(
-    'name'          => esc_html__('Текст в подвале', 'band_digital'),
+    'name'          => __('Text in footer', 'band_digital'),
     'id'            => 'sidebar-footer-text',
     'before_widget' => '<div class="footer-widget footer-link %2$s">',
     'after_widget'  => '</div>',
@@ -179,7 +180,7 @@ function band_digital_widgets_init() {
     'after_title'   => '</h4>'
   ));
   register_sidebar(array(
-    'name'          => esc_html__('Контакты в подвале', 'band_digital'),
+    'name'          => __('Contacts in footer', 'band_digital'),
     'id'            => 'sidebar-footer-contacts',
     'before_widget' => '<div class="footer-widget footer-text %2$s">',
     'after_widget'  => '</div>',
@@ -199,8 +200,8 @@ class Download_Widget extends WP_Widget {
     // __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
     parent::__construct(
       'download_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: download_widget
-      'Полезные файлы',
-      array('description' => 'Прикрепите ссылки на полезные файлы', 'classname' => 'download')
+      __('Useful files', 'band_digital'),
+      array('description' => __('Attach links to useful files', 'band_digital'), 'classname' => 'download')
     );
 
     // скрипты/стили виджета, только если он активен
@@ -238,35 +239,35 @@ class Download_Widget extends WP_Widget {
    * @param array $instance сохраненные данные из настроек
    */
   function form($instance) {
-    $title = @$instance['title'] ?: 'Полезные файлы';
-    $file_name_1 = @$instance['file_name_1'] ?: 'Название файла 1';
-    $file_url_1 = @$instance['file_url_1'] ?: 'URL файла 2';
-    $file_name_2 = @$instance['file_name_2'] ?: 'Название файла 2';
-    $file_url_2 = @$instance['file_url_2'] ?: 'URL файла 2';
+    $title = @$instance['title'] ?: __('Useful files', 'band_digital');
+    $file_name_1 = @$instance['file_name_1'] ?: __('File name  1:', 'band_digital');
+    $file_url_1 = @$instance['file_url_1'] ?: __('Link to file 1:', 'band_digital');
+    $file_name_2 = @$instance['file_name_2'] ?: __('File name  2:', 'band_digital');
+    $file_url_2 = @$instance['file_url_2'] ?: __('Link to file 1:', 'band_digital');
 
     ?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:');?></label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'band_digital');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>"
         type="text" value="<?php echo esc_attr($title); ?>">
 		</p>
     <p>
-			<label for="<?php echo $this->get_field_id('file_name_1'); ?>"><?php _e('Название файла 1:');?></label>
+			<label for="<?php echo $this->get_field_id('file_name_1'); ?>"><?php _e('File name  1:', 'band_digital');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('file_name_1'); ?>" name="<?php echo $this->get_field_name('file_name_1'); ?>"
         type="text" value="<?php echo esc_attr($file_name_1); ?>">
 		</p>
     <p>
-			<label for="<?php echo $this->get_field_id('file_url_1'); ?>"><?php _e('Ссылка на файл 1:');?></label>
+			<label for="<?php echo $this->get_field_id('file_url_1'); ?>"><?php _e('Link to file 1:', 'band_digital');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('file_url_1'); ?>" name="<?php echo $this->get_field_name('file_url_1'); ?>"
         type="text" value="<?php echo esc_attr($file_url_1); ?>">
 		</p>
     <p>
-			<label for="<?php echo $this->get_field_id('file_name_2'); ?>"><?php _e('Название файла 2:');?></label>
+			<label for="<?php echo $this->get_field_id('file_name_2'); ?>"><?php _e('File name  2:', 'band_digital');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('file_name_2'); ?>" name="<?php echo $this->get_field_name('file_name_2'); ?>"
         type="text" value="<?php echo esc_attr($file_name_2); ?>">
 		</p>
     <p>
-			<label for="<?php echo $this->get_field_id('file_url_2'); ?>"><?php _e('Ссылка на файл 2:');?></label>
+			<label for="<?php echo $this->get_field_id('file_url_2'); ?>"><?php _e('Link to file 2:', 'band_digital');?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('file_url_2'); ?>" name="<?php echo $this->get_field_name('file_url_2'); ?>"
         type="text" value="<?php echo esc_attr($file_url_2); ?>">
 		</p>
@@ -636,7 +637,7 @@ class Bootstrap_Walker_Comment extends Walker {
 
     printf(
       /* translators: %s: Comment author link. */
-      __('%s <span class="says">says:</span>'),
+      esc_html__('%s <span class="says">says:</span>'),
       sprintf('<cite class="fn">%s</cite>', $comment_author)
     );
     ?>
@@ -714,9 +715,9 @@ class Bootstrap_Walker_Comment extends Walker {
     $show_pending_links = !empty($commenter['comment_author']);
 
     if ($commenter['comment_author_email']) {
-      $moderation_note = __('Ваш комментарий ждёт модерации.');
+      $moderation_note = __('Your comment is awaiting moderation.');
     } else {
-      $moderation_note = __('Ваш комментарий ждёт модерации. Это превью; Ваш комментарий будет опубликован после проверки.');
+      $moderation_note = __('Your comment is awaiting moderation. This is a preview; your comment will be visible after it has been approved.');
     }
     ?>
 		<<?php echo $tag; ?> id="comment-<?php comment_ID();?>" <?php comment_class($this->has_children ? 'parent' : '', $comment);?>>
@@ -794,18 +795,18 @@ add_action('init', 'service_custom_init');
 function service_custom_init() {
 	register_post_type('service', array(
 		'labels'             => array(
-			'name'               => __('Услуги'), // Основное название типа записи
-      'singular_name'      => __('Услуга'), // отдельное название записи типа service
-			'add_new'            => __('Добавить новую'),
-			'add_new_item'       => __('Добавить новую услугу'),
-			'edit_item'          => __('Редактировать услугу'),
-			'new_item'           => __('Новая услуга'),
-			'view_item'          => __('Посмотреть услугу'),
-			'search_items'       => __('Найти услугу'),
-			'not_found'          => __('Книг не найдено'),
-			'not_found_in_trash' => __('В корзине услуг не найдено'),
+			'name'               => __('Services', 'band_digital'), // Основное название типа записи
+      'singular_name'      => __('Service', 'band_digital'), // отдельное название записи типа service
+			'add_new'            => __('Add new', 'band_digital'),
+			'add_new_item'       => __('Add new service', 'band_digital'),
+			'edit_item'          => __('Edit service', 'band_digital'),
+			'new_item'           => __('New service', 'band_digital'),
+			'view_item'          => __('View service', 'band_digital'),
+			'search_items'       => __('Find service', 'band_digital'),
+			'not_found'          => __('No services found', 'band_digital'),
+			'not_found_in_trash' => __('No services found in Trash', 'band_digital'),
 			'parent_item_colon'  => '',
-			'menu_name'          => __('Услуги'),
+			'menu_name'          => __('Services', 'band_digital'),
     ),
 		'public'             => true,
 		'publicly_queryable' => true,
@@ -827,18 +828,18 @@ add_action('init', 'partners_custom_init');
 function partners_custom_init() {
 	register_post_type('partners', array(
 		'labels'             => array(
-			'name'               => __('Партнёры'), // Основное название типа записи
-      'singular_name'      => __('Партнёр'), // отдельное название записи типа partners
-			'add_new'            => __('Добавить нового'),
-			'add_new_item'       => __('Добавить нового партнёра'),
-			'edit_item'          => __('Редактировать партнёра'),
-			'new_item'           => __('Новая услуга'),
-			'view_item'          => __('Посмотреть партнёра'),
-			'search_items'       => __('Найти партнёра'),
-			'not_found'          => __('Партнёров не найдено'),
-			'not_found_in_trash' => __('В корзине партнёров не найдено'),
+			'name'               => __('Partners', 'band_digital'), // Основное название типа записи
+      'singular_name'      => __('Partner', 'band_digital'), // отдельное название записи типа partners
+			'add_new'            => __('Add new', 'band_digital'),
+			'add_new_item'       => __('Add new partner', 'band_digital'),
+			'edit_item'          => __('Edit partner', 'band_digital'),
+			'new_item'           => __('New partner', 'band_digital'),
+			'view_item'          => __('View partner', 'band_digital'),
+			'search_items'       => __('Find partner', 'band_digital'),
+			'not_found'          => __('No partners found', 'band_digital'),
+			'not_found_in_trash' => __('No partners found in Trash', 'band_digital'),
 			'parent_item_colon'  => '',
-			'menu_name'          => __('Партнёры'),
+			'menu_name'          => __('Partners', 'band_digital'),
     ),
 		'public'             => true,
 		'publicly_queryable' => true,
@@ -860,18 +861,18 @@ function record_custom_init() {
   //Регистрируем тип записи - Тарифы
 	register_post_type('price', array(
 		'labels'             => array(
-			'name'               => __('Тарифы'), // Основное название типа записи
-      'singular_name'      => __('Тариф'), // отдельное название записи типа price
-			'add_new'            => __('Добавить новый'),
-			'add_new_item'       => __('Добавить новый тариф'),
-			'edit_item'          => __('Редактировать тариф'),
-			'new_item'           => __('Новая услуга'),
-			'view_item'          => __('Посмотреть тариф'),
-			'search_items'       => __('Найти тариф'),
-			'not_found'          => __('Тарифов не найдено'),
-			'not_found_in_trash' => __('В корзине тарифов не найдено'),
+			'name'               => __('Prices', 'band_digital'), // Основное название типа записи
+      'singular_name'      => __('Price', 'band_digital'), // отдельное название записи типа price
+			'add_new'            => __('Add new', 'band_digital'),
+			'add_new_item'       => __('Add new price', 'band_digital'),
+			'edit_item'          => __('Edit price', 'band_digital'),
+			'new_item'           => __('New price', 'band_digital'),
+			'view_item'          => __('View price', 'band_digital'),
+			'search_items'       => __('Find price', 'band_digital'),
+			'not_found'          => __('No prices found', 'band_digital'),
+			'not_found_in_trash' => __('No prices found in Trash', 'band_digital'),
 			'parent_item_colon'  => '',
-			'menu_name'          => __('Тарифы'),
+			'menu_name'          => __('Prices', 'band_digital'),
     ),
 		'public'             => true,
 		'publicly_queryable' => true,
@@ -889,18 +890,18 @@ function record_custom_init() {
   //Регистрируем тип записи - Отзывы
   register_post_type('testimonial', array(
 		'labels'             => array(
-			'name'               => __('Отзывы'), // Основное название типа записи
-      'singular_name'      => __('Отзыв'), // отдельное название записи типа price
-			'add_new'            => __('Добавить новый'),
-			'add_new_item'       => __('Добавить новый отзыв'),
-			'edit_item'          => __('Редактировать отзыв'),
-			'new_item'           => __('Новая услуга'),
-			'view_item'          => __('Посмотреть отзыв'),
-			'search_items'       => __('Найти отзыв'),
-			'not_found'          => __('Отзывов не найдено'),
-			'not_found_in_trash' => __('В корзине отзывов не найдено'),
+			'name'               => __('Testimonials', 'band_digital'), // Основное название типа записи
+      'singular_name'      => __('Testimonial', 'band_digital'), // отдельное название записи типа price
+			'add_new'            => __('Add new', 'band_digital'),
+			'add_new_item'       => __('Add new testimonial', 'band_digital'),
+			'edit_item'          => __('Edit testimonial', 'band_digital'),
+			'new_item'           => __('New testimonial', 'band_digital'),
+			'view_item'          => __('View testimonial', 'band_digital'),
+			'search_items'       => __('Find testimonial', 'band_digital'),
+			'not_found'          => __('No testimonials found', 'band_digital'),
+			'not_found_in_trash' => __('No testimonials found in Trash', 'band_digital'),
 			'parent_item_colon'  => '',
-			'menu_name'          => __('Отзывы'),
+			'menu_name'          => __('Testimonials', 'band_digital'),
     ),
 		'public'             => true,
 		'publicly_queryable' => true,
