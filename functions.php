@@ -35,6 +35,29 @@ add_action('after_setup_theme', 'band_digital_setup');
 // }
 // add_filter('get_custom_logo','change_logo_class');
 
+// Удаляем роль при деактивации нашей темы
+add_action( 'switch_theme', 'deactivate_my_theme' );
+function deactivate_my_theme() {
+  remove_role('project_manager');
+  remove_role('developer');
+}
+
+//Создание новой роли - проектный менеджер
+//Добавляем роль при активации нашей темы
+add_action('after_switch_theme', 'activate_my_theme');
+function activate_my_theme() {
+  $admin = get_role('administrator');
+  add_role( 'developer', 'Разработчик', $admin->capabilities);
+	add_role( 'project_manager', 'Менеджер', [
+			'read'         => true,  // true разрешает эту возможность
+			'edit_posts'   => true,  // true разрешает редактировать посты
+      'edit_dashboard'   => false,
+			'upload_files' => false,  // может загружать файлы
+      'publish_posts' => true,  // может публиковать посты
+		]
+	);
+}
+
 //Подключение стилей и скриптов
 add_action('wp_enqueue_scripts', 'band_digital_scripts');
 function band_digital_scripts() {
