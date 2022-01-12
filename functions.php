@@ -941,6 +941,14 @@ function record_custom_init() {
 	));
 }
 
+//Функция для изменения email адреса
+function devise_sender_email($original_email_address) {
+  return 'info@maindiv.ru';
+}
+
+//Цепляем наши функции на фильтры WordPress
+add_filter('wp_mail_from', 'devise_sender_email');
+
 add_action( 'phpmailer_init', 'my_phpmailer_example' );
 function my_phpmailer_example( $phpmailer ) {
 
