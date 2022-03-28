@@ -7,7 +7,7 @@
           <div class="col-lg-8 col-sm-12 col-md-12">
             <div class="banner-content content-padding">
               <h1 class="text-white"><?php
-              printf(__('Search results for&nbsp;phrase: %s', 'band-digital'), '<span>' . get_search_query() . '</span>');
+              printf(__('Search results for&nbsp;phrase: %s', 'band_digital'), '<span>' . get_search_query() . '</span>');
               ?></h1>
             </div>
           </div>
