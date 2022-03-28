@@ -36,7 +36,6 @@ get_header();?>
         <div class="row">
           <div class="col-lg-7 col-sm-12">
             <?=do_shortcode('[contact-form-7 id="630" title="Виджет формы"]');?>
-            </form>
           </div>
           <div class="col-lg-5 pl-4 mt-4 mt-lg-0">
             <h4>Адрес офиса</h4>
