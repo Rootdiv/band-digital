@@ -953,7 +953,7 @@ add_action( 'phpmailer_init', 'my_phpmailer_example' );
 function my_phpmailer_example( $phpmailer ) {
 
 	$phpmailer->isSMTP();
-	$phpmailer->Host = 'smtp.yandex.ru';
+	$phpmailer->Host = 'smtp.mail.ru';
 	$phpmailer->SMTPAuth = true;
 	$phpmailer->Port = 465;
 	require_once 'mail_config.php';
