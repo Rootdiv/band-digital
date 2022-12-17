@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-lg-5 d-none d-lg-block col-sm-12">
             <div class="intro-img">
-              <img src="images/banner/why-choose.png" alt="intro-img" class="img-fluid" />
+              <img src="<?=get_template_directory_uri()?>/images/banner/why-choose.png" alt="intro-img" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-7 col-md-12 col-sm-12">
@@ -142,7 +142,8 @@
           <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
-                <img src="images/icon/007-digital-marketing-3.png" alt="service-icon" class="img-fluid" />
+                <img src="<?=get_template_directory_uri()?>/images/icon/007-digital-marketing-3.png" alt="service-icon"
+                  class="img-fluid" />
               </div>
               <div class="service-inner">
                 <h4>Видео маркетинг</h4>
@@ -156,7 +157,8 @@
           <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
-                <img src="images/icon/008-digital-marketing-2.png" alt="service-icon" class="img-fluid" />
+                <img src="<?=get_template_directory_uri()?>/images/icon/008-digital-marketing-2.png" alt="service-icon"
+                  class="img-fluid" />
               </div>
               <div class="service-inner">
                 <h4>Email маркетинг</h4>
@@ -170,7 +172,8 @@
           <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
-                <img src="images/icon/003-task.png" alt="service-icon" class="img-fluid" />
+                <img src="<?=get_template_directory_uri()?>/images/icon/003-task.png" alt="service-icon"
+                  class="img-fluid" />
               </div>
               <div class="service-inner">
                 <h4>SEO оптимизация</h4>
@@ -184,7 +187,8 @@
           <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
-                <img src="images/icon/010-digital-marketing.png" alt="service-icon" class="img-fluid" />
+                <img src="<?=get_template_directory_uri()?>/images/icon/010-digital-marketing.png" alt="service-icon"
+                  class="img-fluid" />
               </div>
               <div class="service-inner">
                 <h4>Собственный сайт</h4>
@@ -198,7 +202,8 @@
           <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
-                <img src="images/icon/006-analytics.png" alt="service-icon" class="img-fluid" />
+                <img src="<?=get_template_directory_uri()?>/images/icon/006-analytics.png" alt="service-icon"
+                  class="img-fluid" />
               </div>
               <div class="service-inner">
                 <h4>Контент маркетинг</h4>
@@ -212,7 +217,8 @@
           <div class="col-lg-4 col-sm-6 col-md-6">
             <div class="service-box">
               <div class="service-img-icon">
-                <img src="images/icon/004-hiring.png" alt="service-icon" class="img-fluid" />
+                <img src="<?=get_template_directory_uri()?>/images/icon/004-hiring.png" alt="service-icon"
+                  class="img-fluid" />
               </div>
               <div class="service-inner">
                 <h4>Ссылочная масса</h4>
@@ -337,7 +343,7 @@
                       <div class="testimonial-content style-2">
                         <div class="author-info">
                           <div class="author-img">
-                            <img src="images/author/3b.jpg" alt="" class="img-fluid" />
+                            <img src="<?=get_template_directory_uri()?>/images/author/3b.jpg" alt="" class="img-fluid" />
                           </div>
                         </div>
                         <p>
@@ -359,7 +365,7 @@
                       <div class="testimonial-content style-2">
                         <div class="author-info">
                           <div class="author-img">
-                            <img src="images/author/5b.jpg" alt="" class="img-fluid" />
+                            <img src="<?=get_template_directory_uri()?>/images/author/5b.jpg" alt="" class="img-fluid" />
                           </div>
                         </div>
                         <p>
@@ -382,7 +388,7 @@
                       <div class="testimonial-content style-2">
                         <div class="author-info">
                           <div class="author-img">
-                            <img src="images/author/3b.jpg" alt="" class="img-fluid" />
+                            <img src="<?=get_template_directory_uri()?>/images/author/3b.jpg" alt="" class="img-fluid" />
                           </div>
                         </div>
                         <p>
@@ -411,16 +417,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client01.png" alt="partner" class="img-fluid" />
+            <img src="<?=get_template_directory_uri()?>/images/clients/client01.png" alt="partner" class="img-fluid" />
           </div>
           <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client06.png" alt="partner" class="img-fluid" />
+            <img src="<?=get_template_directory_uri()?>/images/clients/client06.png" alt="partner" class="img-fluid" />
           </div>
           <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client04.png" alt="partner" class="img-fluid" />
+            <img src="<?=get_template_directory_uri()?>/images/clients/client04.png" alt="partner" class="img-fluid" />
           </div>
           <div class="col-lg-3 col-sm-6 col-md-3 text-center">
-            <img src="images/clients/client05.png" alt="partner" class="img-fluid" />
+            <img src="<?=get_template_directory_uri()?>/images/clients/client05.png" alt="partner" class="img-fluid" />
           </div>
         </div>
       </div>
@@ -444,7 +450,7 @@
         <div class="row">
           <div class="col-lg-4 col-sm-6 col-md-4">
             <div class="blog-block">
-              <img src="images/blog/blog-1.jpg" alt="" class="img-fluid" />
+              <img src="<?=get_template_directory_uri()?>/images/blog/blog-1.jpg" alt="" class="img-fluid" />
               <div class="blog-text">
                 <h6 class="author-name"><span>Лайфхаки</span>Иван Лазарев</h6>
                 <a href="blog-single.html" class="h5 my-2 d-inline-block"> Лучшие способы вовлечь людей в статью </a>
@@ -454,7 +460,7 @@
           </div>
           <div class="col-lg-4 col-sm-6 col-md-4">
             <div class="blog-block">
-              <img src="images/blog/blog-2.jpg" alt="" class="img-fluid" />
+              <img src="<?=get_template_directory_uri()?>/images/blog/blog-2.jpg" alt="" class="img-fluid" />
               <div class="blog-text">
                 <h6 class="author-name"><span>Брендинг</span>Света Ключева</h6>
                 <a href="blog-single.html" class="h5 my-2 d-inline-block">
@@ -468,7 +474,7 @@
           </div>
           <div class="col-lg-4 col-sm-6 col-md-4">
             <div class="blog-block">
-              <img src="images/blog/blog-3.jpg" alt="" class="img-fluid" />
+              <img src="<?=get_template_directory_uri()?>/images/blog/blog-3.jpg" alt="" class="img-fluid" />
               <div class="blog-text">
                 <h6 class="author-name"><span>Маркетинг</span>Люда Милова</h6>
                 <a href="blog-single.html" class="h5 my-2 d-inline-block"> Как запустить сайт уже завтра? </a>

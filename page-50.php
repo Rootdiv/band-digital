@@ -46,7 +46,7 @@ get_header();?>
             </a>
           </div>
           <div class="col-lg-6 col-md-4">
-            <img src="images/about/about-4.jpg" alt="" class="img-fluid w-100" />
+            <img src="<?=get_template_directory_uri()?>/images/about/about-4.jpg" alt="" class="img-fluid w-100" />
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ get_header();?>
         <div class="row">
           <div class="col-lg-6">
             <div class="media img-block mb-3 mb-lg-0">
-              <img src="images/about/h-1.jpg" alt="" class="img-fluid rounded mr-3" />
+              <img src="<?=get_template_directory_uri()?>/images/about/h-1.jpg" alt="" class="img-fluid rounded mr-3" />
 
               <div class="media-body">
                 <h4 class="mb-3">Оказываем услуги больше 10 лет подряд!</h4>
@@ -68,7 +68,7 @@ get_header();?>
           </div>
           <div class="col-lg-6">
             <div class="media img-block">
-              <img src="images/about/h-2.jpg" alt="" class="img-fluid rounded mr-3" />
+              <img src="<?=get_template_directory_uri()?>/images/about/h-2.jpg" alt="" class="img-fluid rounded mr-3" />
               <div class="media-body">
                 <h4 class="mb-3">Наша задача — достигать целей наших клиентов!</h4>
                 <p>Когда соцсети стали популярны, мы стали оказывать услуги для своих клиентов в соцсетях</p>
@@ -167,7 +167,7 @@ get_header();?>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
-            <img src="images/team/team-1.jpg" alt="" class="img-fluid rounded w-100" />
+            <img src="<?=get_template_directory_uri()?>/images/team/team-1.jpg" alt="" class="img-fluid rounded w-100" />
             <ul class="list-unstyled list-inline team-social mt-4">
               <li class="list-inline-item">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -189,7 +189,7 @@ get_header();?>
             <p>Старший менеджер</p>
           </div>
           <div class="col-lg-3 col-md-6">
-            <img src="images/team/team-2.jpg" alt="" class="img-fluid rounded w-100" />
+            <img src="<?=get_template_directory_uri()?>/images/team/team-2.jpg" alt="" class="img-fluid rounded w-100" />
             <ul class="list-unstyled list-inline team-social mt-4">
               <li class="list-inline-item">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -211,7 +211,7 @@ get_header();?>
             <p>Маркетолог</p>
           </div>
           <div class="col-lg-3 col-md-6">
-            <img src="images/team/team-3.jpg" alt="" class="img-fluid rounded w-100" />
+            <img src="<?=get_template_directory_uri()?>/images/team/team-3.jpg" alt="" class="img-fluid rounded w-100" />
             <ul class="list-unstyled list-inline team-social mt-4">
               <li class="list-inline-item">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -233,7 +233,7 @@ get_header();?>
             <p>Разработчик</p>
           </div>
           <div class="col-lg-3 col-md-6">
-            <img src="images/team/team-4.jpg" alt="" class="img-fluid rounded w-100" />
+            <img src="<?=get_template_directory_uri()?>/images/team/team-4.jpg" alt="" class="img-fluid rounded w-100" />
             <ul class="list-unstyled list-inline team-social mt-4">
               <li class="list-inline-item">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
